@@ -2,6 +2,17 @@
 
 # World Layoffs Data Analysis
 
+## Table of Contents
+- [Description](#description)
+- [Project Outline and Steps](#project-outline-and-steps)
+  - [1. Remove Duplicates](#1-remove-duplicates)
+  - [2. Standardize the Data](#2-standardize-the-data)
+  - [3. Handle Null and Blank Values](#3-handle-null-and-blank-values)
+  - [4. Remove Unnecessary Columns and Rows](#4-remove-unnecessary-columns-and-rows)
+- [How to Run the Project](#how-to-run-the-project)
+- [Conclusion](#conclusion)
+- [Contact Information](#contact-information)
+
 ## Description
 This project focuses on cleaning a global layoffs dataset using SQL. The dataset contains information about companies, locations, industries, layoffs, and more. The objective is to prepare the data for analysis by removing duplicates, standardizing formats, handling null/blank values, and removing unnecessary columns or rows.
 
