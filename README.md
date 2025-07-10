@@ -14,7 +14,7 @@
 - [Contact Information](#contact-information)
 
 ## Description
-This project focuses on cleaning a global layoffs dataset using SQL. The dataset contains information about companies, locations, industries, layoffs, and more. The objective is to prepare the data for analysis by removing duplicates, standardizing formats, handling null/blank values, and removing unnecessary columns or rows.
+This project focuses on cleaning a global layoffs dataset using SQL. The dataset contains information about companies, locations, industries, layoffs, and more. The objective is to prepare the data for analysis by removing duplicates, standardizing formats, handling null or blank values, and removing unnecessary columns or rows, enabling accurate and meaningful analysis afterward.
 
 ## Project Outline and Steps
 
@@ -121,6 +121,7 @@ DROP COLUMN row_num;
 This project showcases a structured approach to cleaning a real-world dataset using SQL. By addressing duplicates, standardizing data, handling missing values, and removing unnecessary data, the dataset is now ready for accurate analysis, ensuring high-quality data for decision-making.
 
 ## Contact Information
+Feel free to connect or reach out via:
 - **LinkedIn:** [My LinkedIn Profile](https://www.linkedin.com/in/justin1643a)
 
 Thanks for reviewing this project. 
