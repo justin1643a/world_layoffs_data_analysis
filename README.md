@@ -21,7 +21,7 @@ This project focuses on cleaning a global layoffs dataset using SQL. The dataset
 ### 1. Remove Duplicates
 Duplicates are identified and removed to ensure data integrity. A staging table preserves the original data, and duplicates are detected using `ROW_NUMBER()`.
 
-**Code Example: Identifying Duplicates**
+**Identifying Duplicates**
 ```sql
 WITH duplicate_cte AS 
 (
@@ -36,7 +36,7 @@ FROM duplicate_cte
 WHERE row_num > 1;
 ```
 
-**Code Example: Deleting Duplicates**
+**Deleting Duplicates**
 ```sql
 DELETE 
 FROM layoffs_staging2
@@ -46,20 +46,20 @@ WHERE row_num > 1;
 ### 2. Standardize the Data
 Data is standardized for consistency, including trimming spaces, unifying industry names, correcting country names, and converting the date column to `DATE` format.
 
-**Code Example: Trimming Company Names**
+**Trimming Company Names**
 ```sql
 UPDATE layoffs_staging2
 SET company = TRIM(company);
 ```
 
-**Code Example: Standardizing Industry Names**
+**Standardizing Industry Names**
 ```sql
 UPDATE layoffs_staging2
 SET industry = 'Crypto'
 WHERE industry LIKE 'crypto%';
 ```
 
-**Code Example: Converting Date Format**
+**Converting Date Format**
 ```sql
 UPDATE layoffs_staging2
 SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
@@ -71,7 +71,7 @@ MODIFY COLUMN `date` DATE;
 ### 3. Handle Null and Blank Values
 Null or blank values are addressed where possible, such as populating missing industry values using a self-join.
 
-**Code Example: Identifying Missing Industry Values**
+**Identifying Missing Industry Values**
 ```sql
 SELECT	t1.company, t2.company, 
 		t1.industry, t2.industry
@@ -84,7 +84,7 @@ AND		t2.industry IS NOT NULL
 ORDER BY 1;
 ```
 
-**Code Example: Updating Missing Industry Values**
+**Updating Missing Industry Values**
 ```sql
 UPDATE layoffs_staging2 t1
 JOIN layoffs_staging2 t2 
@@ -97,7 +97,7 @@ AND t2.industry IS NOT NULL;
 ### 4. Remove Unnecessary Columns and Rows
 Rows with missing critical data (e.g., both `total_laid_off` and `percentage_laid_off` are null) and unnecessary columns (e.g., `row_num`) are removed.
 
-**Code Example: Deleting Rows with Missing Data**
+**Deleting Rows with Missing Data**
 ```sql
 DELETE 
 FROM layoffs_staging2
@@ -105,7 +105,7 @@ WHERE total_laid_off IS NULL
 AND percentage_laid_off IS NULL;
 ```
 
-**Code Example: Dropping Unnecessary Column**
+**Dropping Unnecessary Column**
 ```sql
 ALTER TABLE layoffs_staging2
 DROP COLUMN row_num;
