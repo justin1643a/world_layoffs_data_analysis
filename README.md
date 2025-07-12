@@ -116,8 +116,8 @@ DROP COLUMN row_num;
 2. **Setup Database**:
    - Import the `layoffs.csv` dataset into your MySQL database
    - The dataset should include columns: `company`, `location`, `industry`, `total_laid_off`, `percentage_laid_off`, `date`, `stage`, `country`, `funds_raised_millions`.
-3. **Run the SQL script** `world_layoffs_data_cleaning.sql` to create the necessary tables and perform data cleaning
-4. **Explore the SQL File and Insights**
+3. **Run the SQL script**: `world_layoffs_data_cleaning.sql` to create the necessary tables and perform data cleaning
+4. **Explore the SQL File and Insights**:
 Open the `world_layoffs_data_EDA.sql` file to explore the data and review the SQL queries and insights shared throughout the analysis.
 
 ## Conclusion
