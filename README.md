@@ -114,8 +114,11 @@ DROP COLUMN row_num;
 ## How to Run the Project
 1. **Prerequisites**: Install a MySQL database environment (e.g., MySQL Workbench or another SQL client).
 2. **Setup Database**:
-   - Import the layoffs.csv dataset into your MySQL database
+   - Import the `layoffs.csv` dataset into your MySQL database
    - The dataset should include columns: `company`, `location`, `industry`, `total_laid_off`, `percentage_laid_off`, `date`, `stage`, `country`, `funds_raised_millions`.
+3. **Run the SQL script** `world_layoffs_data_cleaning.sql` to create the necessary tables and perform data cleaning
+4. **Explore the SQL File and Insights**
+Open the `world_layoffs_data_EDA.sql` file to explore the data and review the SQL queries and insights shared throughout the analysis.
 
 ## Conclusion
 This project showcases a structured approach to cleaning a real-world dataset using SQL. By addressing duplicates, standardizing data, handling missing values, and removing unnecessary data, the dataset is now ready for accurate analysis, ensuring high-quality data for decision-making.
